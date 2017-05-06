@@ -5,13 +5,21 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, NavigatorIOS } from 'react-native';
 import Login from './src/components/Login/Login';
 
 export default class githubapp extends Component {
   render() {
     return (
-      <Login />
+      <NavigatorIOS
+        initialRoute={{
+          component: Login,
+          title: 'User Login'
+        }}
+        style={{ flex: 1  }}
+        barTintColor = "#3498db"
+        titleTextColor = "#FFF"
+      />
     );
   }
 }
